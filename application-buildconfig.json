@@ -1,0 +1,13 @@
+{
+    "id": "phils-builds",
+    "kind": "BuildConfig",
+    "apiVersion": "v1beta1",
+    "desiredInput":
+    {
+        "type":      "docker",
+        "sourceURI": "git://github.com/philbrookes/openshift3-blog-part1.git",
+        "imageTag":  "openshift/phils-ruby-blog",
+        "registry":  "127.0.0.1:5001"
+    },
+    "secret": "secret101"
+}
