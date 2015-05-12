@@ -7,7 +7,14 @@
         "type":      "docker",
         "sourceURI": "git://github.com/philbrookes/openshift3-blog-part1.git",
         "imageTag":  "openshift/phils-ruby-blog",
-        "registry":  "127.0.0.1:5001"
+        "registry":  "127.0.0.1:5000"
     },
+    "source": {
+        "type": "git",
+        "git": "https://github.com/philbrookes/openshift3-blog-part1.git"
+    },
+    "strategy": {
+        "type": "tewe"
+    }
     "secret": "secret101"
 }
