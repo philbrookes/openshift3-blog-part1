@@ -1,20 +1,32 @@
 {
-    "id": "phils-builds",
-    "kind": "BuildConfig",
     "apiVersion": "v1beta1",
-    "desiredInput":
-    {
-        "type":      "docker",
-        "sourceURI": "git://github.com/philbrookes/openshift3-blog-part1.git",
-        "imageTag":  "openshift/phils-ruby-blog",
-        "registry":  "127.0.0.1:5000"
+    "kind": "BuildConfig",
+    "metadata": {
+        "name": "phils-build",
+        "labels": {
+           "name": "phils-build"
+        }
     },
-    "source": {
-        "type": "git",
-        "git": "https://github.com/philbrookes/openshift3-blog-part1.git"
-    },
-    "strategy": {
-        "type": "tewe"
-    },
-    "secret": "secret101"
+    "parameters": {
+        "output": {
+            "to": {
+                "name": "phils-ruby-sample"
+            }
+        },
+        "source": {
+            "git": {
+                "uri": "git://github.com/philbrookes/openshift3-blog-part1.git"
+            },
+            "type": "Git"
+        },
+        "strategy": {
+            "type": "Docker",
+            "dockerStrategy": {
+                "from": {
+                    "kind": "ImageStreamTag",
+                    "name":"ruby-20-centos7:latest"
+                }
+            }
+        }
+    }
 }
