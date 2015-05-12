@@ -22,10 +22,6 @@
         "strategy": {
             "type": "Docker",
             "dockerStrategy": {
-                "from": {
-                    "kind": "ImageStreamTag",
-                    "name":"ruby-20-centos7:latest"
-                }
             }
         }
     }
