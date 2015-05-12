@@ -20,9 +20,7 @@
             "type": "Git"
         },
         "strategy": {
-            "type": "Docker",
-            "dockerStrategy": {
-            }
+            "type": "Docker"
         }
     }
 }
